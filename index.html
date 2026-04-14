@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Selector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landingPage">
+  <h1>🎌 Anime Selector</h1>
+  <button onclick="goToCategory()">ENTER</button>
+</div>
+
+<!-- CATEGORY -->
+<div id="categoryPage">
+  <h1>Select Category</h1>
+
+  <div class="category-buttons">
+    <button onclick="startApp('Action')">Action</button>
+    <button onclick="startApp('Romance')">Romance</button>
+    <button onclick="startApp('Comedy')">Comedy</button>
+    <button onclick="startApp('Thriller')">Thriller</button>
+    <button onclick="startApp('Fantasy')">Fantasy</button>
+    <button onclick="startApp('SliceOfLife')">Slice of Life</button>
+    <button onclick="startApp('Psychological')">Psychological</button>
+  </div>
+</div>
+
+
+<!-- MAIN -->
+<div id="mainApp" style="display:none;">
+  <div class="container">
+
+    <!-- WHEEL -->
+    <div class="wheel-section">
+      
+      <h2>🎡 Wheel</h2>
+      <h3 id="result">🎯 Result: -</h3>
+      <canvas id="wheelCanvas" width="300" height="300"></canvas>
+      <button id="spinBtn">Spin</button>
+      <button onclick="goToCategory()">⬅ Back to Category</button>
+    </div>
+
+    <!-- ACTIVE -->
+    <div class="active-section">
+      <h2>⚙️ Current 8</h2>
+      <div id="activeList"></div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <div class="checklist-section">
+      <h2>✅ Checklist</h2>
+      <div id="checklist"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
